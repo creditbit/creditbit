@@ -14,7 +14,7 @@ Short: CREDIT
 - 100 coin reward halving every 3 months, then end of POW.
 - Stake Interest: 8%
 - Minimum Stake Age, 24 hours, One Year Max age
-- 
+
 License
 -------
 
