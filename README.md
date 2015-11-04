@@ -6,7 +6,7 @@ Mainnet:
 
 - RPC Port: 5555
 - P2P Port: 5556
--
+
 Testnet:
 ---------
 
