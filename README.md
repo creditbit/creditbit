@@ -1,4 +1,4 @@
-creditbit is a hybrid PoW/PoS cryptocurrency.
+Creditbit is a hybrid PoW/PoS cryptocurrency.
 ---------------------------------------------
 
 Mainnet:
