@@ -1,9 +1,15 @@
 creditbit is a hybrid PoW/PoS cryptocurrency.
 ---------------------------------------------
 
+Mainnet:
+--------
 
-RPC Port: 5555
-P2P Port: 5556
+- RPC Port: 5555
+- P2P Port: 5556
+Testnet:
+--------
+- RPC Port: 15555
+- P2P Port: 15556
 
 Short: CREDIT
 
