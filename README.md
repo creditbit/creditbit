@@ -13,8 +13,10 @@ Testnet:
 - RPC Port: 15555
 - P2P Port: 15556
 
-Short: CREDIT
+Specifications:
+---------------
 
+- Short: CREDIT
 - Total coin: 100 Million coin cap.
 - X11 hashing algorithm
 - Block time: 1 minute
