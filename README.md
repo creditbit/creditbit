@@ -21,7 +21,7 @@ Specifications:
 - X11 hashing algorithm
 - Block time: 1 minute
 - diff. retarget 15 blocks
-- 100 coin reward halving every 3 months, then end of POW.
+- 100 coin reward halving every 129600 Block, the end of POW is after 3 block halvings.
 - Stake Interest: 8%
 - Minimum Stake Age, 24 hours, One Year Max age
 
