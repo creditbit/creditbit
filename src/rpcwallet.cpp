@@ -1313,7 +1313,11 @@ Value gettransaction(const Array& params, bool fHelp)
                 {
                     CBlockIndex* pindex = (*mi).second;
                     if (pindex->IsInMainChain())
+					{	
                         entry.push_back(Pair("confirmations", 1 + nBestHeight - pindex->nHeight));
+						entry.push_back(Pair("txntime", (boost::int64_t)tx.nTime));
+                        entry.push_back(Pair("time", (boost::int64_t)pindex->nTime));
+					}
                     else
                         entry.push_back(Pair("confirmations", 0));
                 }
