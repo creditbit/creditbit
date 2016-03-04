@@ -1313,7 +1313,11 @@ Value gettransaction(const Array& params, bool fHelp)
                 {
                     CBlockIndex* pindex = (*mi).second;
                     if (pindex->IsInMainChain())
+					{	
                         entry.push_back(Pair("confirmations", 1 + nBestHeight - pindex->nHeight));
+						entry.push_back(Pair("txntime", (boost::int64_t)tx.nTime));
+                        entry.push_back(Pair("time", (boost::int64_t)pindex->nTime));
+					}
                     else
                         entry.push_back(Pair("confirmations", 0));
                 }
@@ -1544,7 +1548,7 @@ Value encryptwallet(const Array& params, bool fHelp)
             "Encrypts the wallet with <passphrase>.");
 
     if (!pwalletMain->EncryptWallet(strWalletPass))
-        throw JSONRPCError(RPC_WALLET_ENCREDITION_FAILED, "Error: Failed to encrypt the wallet.");
+        throw JSONRPCError(RPC_WALLET_ENCRYPTION_FAILED, "Error: Failed to encrypt the wallet.");
 
     // BDB seems to have a bad habit of writing old data into
     // slack space in .dat files; that is bad if the old data is
