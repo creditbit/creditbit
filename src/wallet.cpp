@@ -254,14 +254,14 @@ bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
     CKeyingMaterial vMasterKey;
     RandAddSeedPerfmon();
 
-    vMasterKey.resize(WALLET_CREDITO_KEY_SIZE);
-    RAND_bytes(&vMasterKey[0], WALLET_CREDITO_KEY_SIZE);
+    vMasterKey.resize(WALLET_CRYPTO_KEY_SIZE);
+    RAND_bytes(&vMasterKey[0], WALLET_CRYPTO_KEY_SIZE);
 
     CMasterKey kMasterKey(nDerivationMethodIndex);
 
     RandAddSeedPerfmon();
-    kMasterKey.vchSalt.resize(WALLET_CREDITO_SALT_SIZE);
-    RAND_bytes(&kMasterKey.vchSalt[0], WALLET_CREDITO_SALT_SIZE);
+    kMasterKey.vchSalt.resize(WALLET_CRYPTO_SALT_SIZE);
+    RAND_bytes(&kMasterKey.vchSalt[0], WALLET_CRYPTO_SALT_SIZE);
 
     CCrypter crypter;
     int64_t nStartTime = GetTimeMillis();
@@ -301,7 +301,7 @@ bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
         }
 
         // Encryption was introduced in version 0.4.0
-        SetMinVersion(FEATURE_WALLETCREDIT, pwalletdbEncryption, true);
+        SetMinVersion(FEATURE_WALLETCRYPT, pwalletdbEncryption, true);
 
         if (fFileBacked)
         {

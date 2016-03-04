@@ -1,15 +1,15 @@
 // Copyright (c) 2009-2012 The Bitcoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef __CREDITER_H__
-#define __CREDITER_H__
+#ifndef __CRYPTER_H__
+#define __CRYPTER_H__
 
 #include "allocators.h" /* for SecureString */
 #include "key.h"
 #include "serialize.h"
 
-const unsigned int WALLET_CREDITO_KEY_SIZE = 32;
-const unsigned int WALLET_CREDITO_SALT_SIZE = 8;
+const unsigned int WALLET_CRYPTO_KEY_SIZE = 32;
+const unsigned int WALLET_CRYPTO_SALT_SIZE = 8;
 
 /*
 Private key encryption is done based on a CMasterKey,
@@ -84,8 +84,8 @@ typedef std::vector<unsigned char, secure_allocator<unsigned char> > CKeyingMate
 class CCrypter
 {
 private:
-    unsigned char chKey[WALLET_CREDITO_KEY_SIZE];
-    unsigned char chIV[WALLET_CREDITO_KEY_SIZE];
+    unsigned char chKey[WALLET_CRYPTO_KEY_SIZE];
+    unsigned char chIV[WALLET_CRYPTO_KEY_SIZE];
     bool fKeySet;
 
 public:

@@ -16,7 +16,7 @@ Testnet:
 Specifications:
 ---------------
 
-- Short: CREDIT
+- Short: CRBIT
 - Total coin: 100 Million coin cap.
 - X11 hashing algorithm
 - Block time: 1 minute
